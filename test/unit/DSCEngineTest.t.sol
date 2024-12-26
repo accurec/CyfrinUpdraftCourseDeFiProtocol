@@ -33,7 +33,7 @@ contract DSCEngineTest is Test {
     address public liquidator = makeAddr("liquidator");
     uint256 public collateralToCover = 20 ether;
 
-     // These are copied from the "DSCEngine.sol", because this is the only (?) way we can make it work with testing in Foundry
+    // These are copied from the "DSCEngine.sol", because this is the only (?) way we can make it work with testing in Foundry
     event DSCEngine__CollateralDeposited(address indexed user, address indexed token, uint256 indexed amount);
     event DSCEngine__CollateralRedeemed(
         address indexed redeemedFrom,
