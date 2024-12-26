@@ -63,7 +63,7 @@ contract HelperConfig is Script {
             wbtcUsdPriceFeed: address(btcUsdPriceFeed),
             weth: address(wethMock),
             wbtc: address(wbtcMock),
-            deployerAccount: vm.envAddress("LOCAL_ACCOUNT_ADDRESS")
+            deployerAccount: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
         });
     }
 }
