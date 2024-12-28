@@ -30,7 +30,7 @@ contract OpenInvariantsTest is StdInvariant, Test {
         (,, weth, wbtc,) = config.activeNetworkConfig();
         handler = new Handler(dsce, dsc);
         targetContract(address(handler)); // <- call functions here instead of "address(dsce)"
-        // targetContract(address(dsce));
+            // targetContract(address(dsce));
     }
 
     function invariant_protocolMustHaveMoreValueThanTotalSupply() public view {

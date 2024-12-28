@@ -70,7 +70,6 @@ contract Handler is Test {
         dsce.mintDsc(amount);
     }
 
-
     function redeemCollateral(uint256 collateralSeed, uint256 amountCollateral) public {
         ERC20Mock collateral = _getCollateralFromSeed(collateralSeed);
         (uint256 totalDscMinted, uint256 collateralValueInUsd) = dsce.getAccountInformation(msg.sender);
@@ -81,7 +80,8 @@ contract Handler is Test {
         }
 
         // Need to make sure we only redeem what we can to not ruin the health factor
-        uint256 potentialCollateralToRedeem = dsce.getTokenAmountFromUsd(address(collateral), uint256(totalAllowedUsdToRedeem));
+        uint256 potentialCollateralToRedeem =
+            dsce.getTokenAmountFromUsd(address(collateral), uint256(totalAllowedUsdToRedeem));
         uint256 userCollateralDeposited = dsce.getCollateralBalanceOfUser(msg.sender, address(collateral));
         uint256 maxCollateralToRedeem = Math.min(potentialCollateralToRedeem, userCollateralDeposited);
 

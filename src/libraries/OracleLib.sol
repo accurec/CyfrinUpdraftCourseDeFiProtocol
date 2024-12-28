@@ -13,10 +13,16 @@ import {AggregatorV3Interface} from "@chainlink/contracts/v0.8/shared/interfaces
  */
 library OracleLib {
     error OracleLib__StalePrice();
+
     uint256 private constant TIMEOUT = 3 hours; // 3 * 60 * 60 = 10800 seconds - giving a feed a bit more than official heartbeat
 
-    function staleCheckLatestRoundData(AggregatorV3Interface priceFeed) public view returns (uint80, int256, uint256, uint256, uint80) {
-        (uint80 roundId, int256 answer, uint256 startedAt, uint256 updatedAt, uint80 answeredInRound) = priceFeed.latestRoundData();
+    function staleCheckLatestRoundData(AggregatorV3Interface priceFeed)
+        public
+        view
+        returns (uint80, int256, uint256, uint256, uint80)
+    {
+        (uint80 roundId, int256 answer, uint256 startedAt, uint256 updatedAt, uint80 answeredInRound) =
+            priceFeed.latestRoundData();
 
         // NOTE: We should probably ask feed for the heartbeat value but for our example here just hardcoded above
         uint256 secondsSince = block.timestamp - updatedAt;
