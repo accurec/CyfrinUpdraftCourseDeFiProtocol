@@ -42,7 +42,7 @@ contract DSCEngineTest is Test {
         uint256 amountCollateral
     );
 
-    // TODO: Fix so that tests work for Sepolia chain
+    // TODO: Fix so that tests work for Sepolia test chain
     function setUp() public {
         deployer = new DeployDSC();
         (dsc, dsce, config) = deployer.run();
