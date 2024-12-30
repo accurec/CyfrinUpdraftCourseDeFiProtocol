@@ -61,7 +61,7 @@ As part of lesson I've learned a bunch of things:
 
 1) [Simple Security Toolkit](https://github.com/nascentxyz/simple-security-toolkit/tree/main)
 2) [Ethereum Unit Converter](https://eth-converter.com/)
-3) [Reentrancy Vulnerability Overview](https://owasp.org/www-project-smart-contract-top-10/2023/en/src/SC01-reentrancy-attacks.html#:~:text=A%20reentrancy%20attack%20exploits%20the,withdrawals%2C%20using%20the%20same%20state.)
+3) [Re-Entrancy Vulnerability Overview](https://owasp.org/www-project-smart-contract-top-10/2023/en/src/SC01-reentrancy-attacks.html#:~:text=A%20reentrancy%20attack%20exploits%20the,withdrawals%2C%20using%20the%20same%20state.)
 4) [Foundry Fuzz Testing](https://book.getfoundry.sh/forge/fuzz-testing)
 
 ## TODO list
