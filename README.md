@@ -67,6 +67,7 @@ As part of lesson I've learned a bunch of things:
 ## TODO list
 
 1) Fix tests so that they are passing on Sepolia testnet.
-2) Add integrations tests.
-3) Fix `invariant_gettersShouldNotRevert` invariant so that all getters can be fuzz tested. Most likely need to add the logic to handler.
-4) Deploy and test on Sepolia testnet. Add `Makefile` commands to deploy to Sepolia.
+2) Add more scripts for interactions.
+3) Add integrations tests.
+4) Fix `invariant_gettersShouldNotRevert` invariant so that all getters can be fuzz tested. Most likely need to add the logic to handler.
+5) Deploy and test on Sepolia testnet. Add `Makefile` commands to deploy to Sepolia.
